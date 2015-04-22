@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+</head>
+    
+<body>
+<div class="page-header"><center><h2><font color="#009ACD">Enter Details</font></h2></center></div>
+
+<form ng-app="formApp" ng-controller="validateCtrl" name="myForm" novalidate>
+
+<p>Name:<br>
+<input type="text" name="user" ng-model="user" ng-minlength="3" ng-maxlength="15" placeholder="Name" required>
+<span  ng-show="myForm.user.$dirty && myForm.user.$invalid"></span>
+<span ng-show="myForm.user.$error.required"><font color="red">Name is required</font>.</span>
+<span ng-show="myForm.user.$error.minlength"><font color="red">Name should be min 3 characters.</font></span>
+<span ng-show="myForm.user.$error.maxlength"><font color="red">Too long Name.</font></span>
+</p>
+
+<p>Email:<br>
+<input type="email" name="email" ng-model="email" placeholder="Email" required>
+<span ng-show="myForm.email.$dirty && myForm.email.$invalid"></span>
+<span ng-show="myForm.email.$error.required"><font color="red">Email is required.</font></span>
+<span ng-show="myForm.email.$error.email"><font color="red">Invalid email address.</font></span>
+</p>
+
+<p>Address:<br>
+<input type="text" name="address" ng-model="address" ng-minlength="5" ng-maxlength="25" placeholder="Address" required>
+<span ng-show="myForm.address.$dirty && myForm.address.$invalid"></span>
+<span ng-show="myForm.address.$error.required"><font color="red">Address is required.</font></span>
+<span ng-show="myForm.address.$error.minlength"><font color="red">Address should be min 10 characters.</font></span>
+<span ng-show="myForm.address.$error.maxlength"><font color="red">Address is too long.</font></span>
+</p>
+
+<p>Contact Number:<br>
+<input type="text" name="contact" ng-model="contact" ng-minlength="8" ng-maxlength="10" placeholder="Contact Number" required>
+<span ng-show="myForm.contact.$dirty && myForm.contact.$invalid"></span>
+<span ng-show="myForm.contact.$error.required"><font color="red">Contact Number is required.</font></span>
+<span ng-show="myForm.contact.$error.minlength"><font color="red">Contact Number should be min 8 characters.</font></span>
+<span ng-show="myForm.contact.$error.maxlength"><font color="red">Contact Number should not be more than 10 characters.</font></span>
+</p>
+
+<div class="col"style="text-align: center">
+    <button align="left"class="button button-block button-reset"style="display: inline-block;width:100px;text-align:center "
+            type="reset" ng-click="resetAll()"padding-top="true">Reset</button>
+	
+	<button class="button button-block button-positive"  style="display: inline-block;width:100px "
+            ng-click="submit()"padding-top="true">Submit</button>
+ </div>
+
+</form>
+
+<script>
+	var app = angular.module("formApp", []);
+
+	app.controller("validateCtrl", function($scope) {
+    	$scope.user = 'Your Name';
+    	$scope.email = 'abc@efg.com';
+    	$scope.address = 'Place';
+    	$scope.contact = '1234567890';
+    	$scope.resetAll = function(){
+    			$scope.user = 'Your Name';
+		    	$scope.email = 'abc@efg.com';
+		    	$scope.address = 'Place';
+		    	$scope.contact = '1234567890';
+    	};
+	});
+</script>
+
+</body>
+</html>

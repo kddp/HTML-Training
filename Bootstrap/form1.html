@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	</head>
+	<body>
+		<div class="page-header"><center><h2>Enter Details</h2></center></div>
+
+    	<form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+
+		<div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$dirty }">
+            <label>Name</label>
+            <input type="text" name="name" class="item-input-wrapper form-control" ng-model="user.name"  required>
+            <p ng-show="userForm.name.$invalid && !userForm.name.$pristine " class="help-block"><font color="#009ACD">You name is required.</font></p>
+
+
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$dirty  }">
+            <label>Email</label>
+            <input type="email" name="email" class="item-input-wrapper form-control" ng-model="user.email" required >
+            <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block"><font color="#009ACD">Enter a valid email.</font></p>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-error' : userForm.username.$invalid && !userForm.username.$dirty }">
+            <label>Description</label>
+            <input type="text" name="username" class="item-input-wrapper form-control" ng-model="user.username"  ng-minlength="5" ng-maxlength="60" required>
+            <font color="white"><p ng-show="userForm.username.$error.minlength" class="help-block"><font color="#009ACD">Description is too short.</font></p>
+            <p ng-show="userForm.username.$error.maxlength" class="help-block"><font color="#009ACD">Description is too long.</font></p>
+        </div>
+
+        <div class="col"style="text-align: center">
+            <button align="left"class="button button-block button-reset"style="display: inline-block;width:100px;text-align:center "
+            type="reset"
+            ng-click="reset()"padding-top="true">Reset</button>
+
+
+            <button class="button button-block button-positive"  style="display: inline-block;width:100px "
+            ng-click="submit()"padding-top="true">Submit</button>
+            </div>
+
+    	</form>
+    	<script>
+    		.controller('ContactCtrl', function($scope,$state,$ionicPopup, $timeout) {
+            $scope.showfeedback = function() {
+            $state.go('app.sfeedback');
+
+            };
+
+
+
+            $scope.submitForm = function(isValid) {
+            $scope.submitted = true;
+
+
+            if (!isValid) {
+                 var alertPopup = $ionicPopup.alert({
+                 title: 'Invalid data entered!',
+                });
+                }
+                else{
+                var alertPopup = $ionicPopup.alert({
+                 title: 'Feedback submitted',
+                });
+                }
+            };
+
+             $scope.reset = function() {
+             var original = $scope.user;
+             $scope.user= angular.copy(original)
+             $scope.userForm.$setPristine()
+             };
+
+
+
+            })
+    	</script>
+
+	</body>
+</html>
