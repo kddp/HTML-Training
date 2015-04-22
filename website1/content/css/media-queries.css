@@ -1,0 +1,974 @@
+@media screen and (max-width: 319px) {
+	#home-wrapper {
+		background:url(../images/bg.png) no-repeat;
+		padding-bottom: 0px;
+		height:580px;
+		background-position:fixed;
+	}
+	/*header strips*/
+	.header-strips h1{
+		font-size:26px;
+		margin-bottom:-5px;
+		line-height:25px;
+	}
+	.header-strips h4{
+		font-size:14px;
+		line-height:17px;
+	}
+	
+	.logo {
+		text-align:center;
+	}
+	nav .current_page_item a {
+		background:none;
+		color:#996699;
+	}
+	nav {
+		text-align:center;
+		float:none;
+	}
+	nav li a, nav li span {
+		padding:0 20px;
+		font-size:12px;
+	}
+	
+	.links {
+		text-align:center;
+		float:none;
+		margin-right:0;
+	}
+	
+	/*slider*/
+	.da-slider {
+		margin-top:0px !important;
+		height:240px !important;
+		min-width:300px !important;
+	}
+	.da-slide h2 {
+		font-size:30px  !important;
+		top:10px !important;
+	}
+	.da-slide p {
+		font-size:14px  !important;
+		top: 60px  !important;
+	}
+	
+	.da-slide .da-img {
+		width:30%  !important;
+		top:10px  !important;
+	}
+	.da-slide .da-link{
+		top:140px  !important;
+		font-size: 10px  !important;
+		padding: 1px 5px 0px !important;
+	}
+	.da-dots{
+		top:220px !important;
+	}
+	
+	footer {
+		padding:5px;
+		margin-top: 20px;
+	}
+	/*footer*/
+	.footer-left {
+		text-align:center;
+	}
+	.footer-right {
+		float:none !important;
+		text-align:center;
+	}
+	/*contact us page*/
+	#contact-wrapper {
+		background:url(../images/bg.png) no-repeat;
+		padding-bottom: 0px;
+		height:225px;
+		background-position:fixed;
+	}
+	
+	.contact-wrapper {
+		text-align:center;
+		margin-left:10px;
+		margin-right:10px;
+	}
+	
+	/*career page*/
+	#career-wrapper {
+		background:url(../images/bg.png) no-repeat;
+		padding-bottom: 0px;
+		height:225px;
+		background-position:fixed;
+	}
+	.career-wrapper {
+		text-align:center;
+		margin-left:10px;
+		margin-right:10px;
+	}
+	
+	/*about page*/
+	#about-wrapper {
+		background:url(../images/bg.png) no-repeat;
+		padding-bottom: 0px;
+		height:225px;
+		background-position:fixed;
+	}
+	.about-wrapper {
+		text-align:center;
+		margin-left:10px;
+		margin-right:10px;
+	}
+	
+	.about-heading h1{
+		margin:20px 5px;
+		font-size:22px; 
+		text-align:center;
+	}
+	.company-logo {
+		margin-bottom:20px;
+	}
+	
+	.team-wrapper h1{
+		margin-top:20px;
+		margin-bottom:0;
+		text-align:center;
+	}
+	.management-wrapper {
+		text-align:center;
+	}
+	.management-wrapper h1{
+		margin-top:15px;
+		margin-bottom:0;
+	}
+	.management-wrapper h2{
+		margin:0px 0 -10px 0;
+	}
+	.management-wrapper p{
+		margin:0 15px;
+		text-align:justify;
+	}
+	
+	/*services page*/
+	#services-wrapper {
+		background:url(../images/bg.png) no-repeat;
+		padding-bottom: 0px;
+		height:225px;
+		background-position:fixed;
+	}
+	.services-wrapper {
+		text-align:center;
+	}
+	.responsive-webdesign h1 {
+		font-size:32px;
+	}
+	.responsive-webdesign h3 {
+		font-size:16px;
+		padding:0 5px;
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 359px) {
+	#home-wrapper {
+		background:url(../images/bg.png) no-repeat;
+		padding-bottom: 0px;
+		height:580px;
+		background-position:fixed;
+	}
+	/*header strips*/
+	.header-strips h1{
+		font-size:26px;
+		margin-bottom:-5px;
+		line-height:25px;
+	}
+	.header-strips h4{
+		font-size:14px;
+		line-height:17px;
+	}
+	
+	.logo {
+		text-align:center;
+	}
+	nav .current_page_item a {
+		background:none;
+		color:#996699;
+	}
+	nav {
+		text-align:center;
+		float:none;
+	}
+	nav li a, nav li span {
+		padding:0 20px;
+		font-size:12px;
+	}
+	
+	.links {
+		text-align:center;
+		float:none;
+		margin-right:0;
+	}
+	
+	/*slider*/
+	.da-slider {
+		margin-top:0px !important;
+		height:240px !important;
+		min-width:300px !important;
+	}
+	.da-slide h2 {
+		font-size:30px  !important;
+		top:10px !important;
+	}
+	.da-slide p {
+		font-size:14px  !important;
+		top: 60px  !important;
+	}
+	
+	.da-slide .da-img {
+		width:30%  !important;
+		top:10px  !important;
+	}
+	.da-slide .da-link{
+		top:140px  !important;
+		font-size: 10px  !important;
+		padding: 1px 5px 0px !important;
+	}
+	.da-dots{
+		top:220px !important;
+	}
+	
+	footer {
+		padding:5px;
+		margin-top: 20px;
+	}
+	/*footer*/
+	.footer-left {
+		text-align:center;
+	}
+	.footer-right {
+		float:none !important;
+		text-align:center;
+	}
+	/*contact us page*/
+	#contact-wrapper {
+		background:url(../images/bg.png) no-repeat;
+		padding-bottom: 0px;
+		height:225px;
+		background-position:fixed;
+	}
+	
+	.contact-wrapper {
+		text-align:center;
+		margin-left:10px;
+		margin-right:10px;
+	}
+	
+	/*career page*/
+	#career-wrapper {
+		background:url(../images/bg.png) no-repeat;
+		padding-bottom: 0px;
+		height:225px;
+		background-position:fixed;
+	}
+	.career-wrapper {
+		text-align:center;
+		margin-left:10px;
+		margin-right:10px;
+	}
+	
+	/*about page*/
+	#about-wrapper {
+		background:url(../images/bg.png) no-repeat;
+		padding-bottom: 0px;
+		height:225px;
+		background-position:fixed;
+	}
+	.about-wrapper {
+		text-align:center;
+		margin-left:10px;
+		margin-right:10px;
+	}
+	
+	.about-heading h1{
+		margin:20px 5px;
+		font-size:22px; 
+		text-align:center;
+	}
+	.company-logo {
+		margin-bottom:20px;
+	}
+	
+	.team-wrapper h1{
+		margin-top:20px;
+		margin-bottom:0;
+		text-align:center;
+	}
+	.management-wrapper {
+		text-align:center;
+	}
+	.management-wrapper h1{
+		margin-top:15px;
+		margin-bottom:0;
+	}
+	.management-wrapper h2{
+		margin:0px 0 -10px 0;
+	}
+	.management-wrapper p{
+		margin:0 15px;
+		text-align:justify;
+	}
+	
+	/*services page*/
+	#services-wrapper {
+		background:url(../images/bg.png) no-repeat;
+		padding-bottom: 0px;
+		height:225px;
+		background-position:fixed;
+	}
+	.services-wrapper {
+		text-align:center;
+	}
+	.responsive-webdesign h1 {
+		font-size:32px;
+	}
+	.responsive-webdesign h3 {
+		font-size:16px;
+		padding:0 5px;
+	}
+}
+
+@media screen and (min-width: 360px) and (max-width: 479px) {
+
+	#home-wrapper {
+		background:url(../images/bg.png) no-repeat;
+		padding-bottom: 0px;
+		height:520px;
+		background-position:fixed;
+	}
+	
+	/*header strips*/
+	.header-strips h1{
+		font-size:28px;
+		margin-bottom:-5px;
+		line-height:25px;
+	}
+	.header-strips h4{
+		font-size:16px;
+		line-height:17px;
+	}
+	
+	.logo {
+		text-align:center;
+	}
+	nav .current_page_item a {
+		background:none;
+		color:#996699;
+	}
+	nav {
+		text-align:center;
+		float:none;
+	}
+	
+	nav li a, nav li span {
+		padding:0 5px;
+		font-size:12px;
+	}
+	
+	ul, ol {
+		margin-left:0px;
+	}
+	
+	/*slider*/
+	.da-slider {
+		margin-top:0px !important;
+		height:250px !important;
+		min-width:340px !important;
+	}
+	.da-slide h2 {
+		font-size:30px  !important;
+		top:10px !important;
+	}
+	.da-slide p {
+		font-size:14px  !important;
+		top: 60px  !important;
+	}
+	
+	.da-slide .da-img {
+		width:30%  !important;
+		top:10px  !important;
+	}
+	.da-slide .da-link{
+		top:130px  !important;
+		font-size: 10px  !important;
+		padding: 2px 5px 0px !important;
+	}
+	.da-dots{
+		top:220px !important;
+	}
+	
+	#carousel {
+		width:460px !important;
+		text-align:center;
+	}
+	
+	.wrapper p{
+		width:440px !important;
+		margin:0 auto;
+		font-size:25px;
+	}
+	
+	.about-people {
+		width:98%;
+	}
+	/*footer*/
+	.footer-left {
+		text-align:center;
+	}
+	.footer-right {
+		float:none !important;
+		text-align:center;
+	}
+	/*contact us page*/
+	#contact-wrapper {
+		background:url(../images/bg.png) no-repeat;
+		background-position:fixed;
+		height:120px;
+		padding-bottom: 30px;
+	}
+	.contact-wrapper {
+		text-align:center;
+		margin-left:10px;
+		margin-right:10px;
+	}
+	
+	/*career us page*/
+	#career-wrapper {
+		background:url(../images/bg.png) no-repeat;
+		background-position:fixed;
+		height:120px;
+		padding-bottom: 30px;
+	}
+	.career-wrapper {
+		text-align:center;
+		margin-left:10px;
+		margin-right:10px;
+	}
+	
+	/*about us page*/
+	#about-wrapper {
+		background:url(../images/bg.png) no-repeat;
+		background-position:fixed;
+		height:120px;
+		padding-bottom: 30px;
+	}
+	.about-wrapper {
+		text-align:center;
+		margin-left:10px;
+		margin-right:10px;
+	}
+	.about-heading h1{
+		margin:20px 5px;
+		font-size:26px; 
+		text-align:center;
+	}
+	.company-logo {
+		margin-bottom:20px;
+	}
+	
+	.team-wrapper h1{
+		margin-top:20px;
+		margin-bottom:0;
+		text-align:center;
+	}
+	.management-wrapper {
+		text-align:center;
+	}
+	.management-wrapper h1{
+		margin-top:15px;
+		margin-bottom:0;
+	}
+	.management-wrapper h2{
+		margin:0px 0 -10px 0;
+	}
+	.management-wrapper p{
+		margin:0 15px;
+		text-align:justify;
+	}
+	
+	/*services us page*/
+	#services-wrapper {
+		background:url(../images/bg.png) no-repeat;
+		background-position:fixed;
+		height:120px;
+		padding-bottom: 30px;
+	}
+	.services-wrapper {
+		text-align:center;
+	}
+	.responsive-webdesign h1 {
+		font-size:32px;
+	}
+	.responsive-webdesign h3 {
+		font-size:16px;
+		padding:0 5px;
+	}
+}
+
+@media screen and (min-width: 480px) and (max-width: 599px) {
+
+	#home-wrapper {
+		background:url(../images/bg.png) no-repeat;
+		padding-bottom: 0px;
+		height:550px;
+		background-position:fixed;
+	}
+	/*header strips*/
+	.header-strips h1{
+		font-size:28px;
+		margin-bottom:-15px
+	}
+	.header-strips h4{
+		font-size:16px;
+	}
+	
+	.logo {
+		text-align:center;
+	}
+	nav .current_page_item a {
+		background:none;
+		color:#996699;
+	}
+	nav {
+		text-align:center;
+		float:none;
+	}
+	
+	ul, ol {
+		margin-left:0px;
+	}
+	nav li a, nav li span {
+		padding:0 10px;
+		font-size:12px;
+	}
+	/*slider*/
+	.da-slider {
+		margin-top:0px !important;
+		height:320px !important;
+		min-width:460px !important;
+	}
+	.da-slide h2 {
+		font-size:40px  !important;
+		top: 20px  !important;
+	}
+	
+	.da-slide p {
+		font-size:16px  !important;
+		top: 100px  !important;
+	}
+	
+	.da-slide .da-img {
+		width:30%  !important;
+		top:40px  !important;
+	}
+	.da-slide .da-link{
+		top:170px  !important;
+		font-size: 12px  !important;
+		padding: 2px 10px 0px !important;
+	}
+	
+	
+	#carousel {
+		width:460px !important;
+		text-align:center;
+	}
+	
+	.wrapper p{
+		width:440px !important;
+		margin:0 auto;
+		font-size:25px;
+	}
+	
+	.about-people {
+		width:98%;
+	}
+	
+	/*footer*/
+	.footer-left {
+		text-align:center;
+	}
+	.footer-right {
+		float:none !important;
+		text-align:center;
+	}
+	/*contact us page*/
+	#contact-wrapper {
+		height:120px;
+		padding-bottom: 30px;
+		background:url(../images/bg.png) no-repeat;
+		background-position:fixed;
+	}
+	.contact-wrapper {
+		text-align:center;
+		margin-left:10px;
+		margin-right:10px;
+	}
+	
+	/*career  page*/
+	#career-wrapper {
+		height:120px;
+		padding-bottom: 30px;
+		background:url(../images/bg.png) no-repeat;
+		background-position:fixed;
+	}
+	.career-wrapper {
+		text-align:center;
+		margin-left:10px;
+		margin-right:10px;
+	}
+	
+	/*about us page*/
+	#about-wrapper {
+		height:120px;
+		padding-bottom: 30px;
+		background:url(../images/bg.png) no-repeat;
+		background-position:fixed;
+	}
+	.about-wrapper {
+		text-align:center;
+		margin-left:10px;
+		margin-right:10px;
+	}
+	.about-heading h1{
+		margin:20px 5px;
+		font-size:32px; 
+		text-align:center;
+	}
+	.company-logo {
+		margin-bottom:20px;
+	}
+	
+	.team-wrapper h1{
+		margin-top:20px;
+		margin-bottom:0;
+		text-align:center;
+	}
+	.management-wrapper {
+		text-align:center;
+	}
+	.management-wrapper h1{
+		margin-top:15px;
+		margin-bottom:0;
+	}
+	.management-wrapper h2{
+		margin:0px 0 -10px 0;
+	}
+	.management-wrapper p{
+		margin:0 15px;
+		text-align:justify;
+	}
+	
+	/*services  page*/
+	#services-wrapper {
+		height:120px;
+		padding-bottom: 30px;
+		background:url(../images/bg.png) no-repeat;
+		background-position:fixed;
+	}
+	.services-wrapper {
+		text-align:center;
+	}
+	.responsive-webdesign h1 {
+		font-size:36px;
+	}
+	.responsive-webdesign h3 {
+		font-size:18px;
+		padding:0 5px;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+
+	#home-wrapper {
+		background:url(../images/bg.png) no-repeat;
+		padding-bottom: 0px;
+		height:520px;
+		background-position:fixed;
+	}
+	
+	/*header strips*/
+	.header-strips h1{
+		font-size:32px;
+		margin-bottom:-12px;
+	}
+	
+	.logo {
+		text-align:center;
+	}
+	nav .current_page_item a {
+		background:none;
+		color:#996699;
+	}
+	nav {
+		text-align:center;
+		float:none;
+	}
+	nav li a, nav li span {
+		padding:0 20px;
+		font-size:12px;
+	}
+	
+	#carousel {
+		width:580px !important;
+		text-align:center;
+	}
+	
+	.wrapper p{
+		width:560px !important;
+		margin:0 auto;
+		font-size:25px;
+	}
+	
+	.about-people {
+		width:98%;
+	}
+	/*footer*/
+	.footer-left {
+		text-align:center;
+	}
+	.footer-right {
+		float:none !important;
+		text-align:center;
+	}
+	/*slider*/
+	.da-slider {
+		margin-top:0px !important;
+		height:280px !important;
+		min-width:560px !important;
+	}
+	.da-slide h2 {
+		font-size:40px  !important;
+		top: 20px  !important;
+	}
+	
+	.da-slide p {
+		font-size:16px  !important;
+		top: 80px  !important;
+	}
+	
+	.da-slide .da-img {
+		width:30%  !important;
+		top:10px  !important;
+	}
+	.da-slide .da-link{
+		top:140px  !important;
+		font-size: 12px  !important;
+		padding: 2px 10px 0px !important;
+	}
+	.da-dots{
+		top:240px !important;
+	}
+	/*contact us page*/
+	#contact-wrapper {
+		height:120px;
+		padding-bottom: 30px;
+		background:url(../images/bg.png) no-repeat;
+		background-position:fixed;
+	}
+	.contact-wrapper {
+		text-align:center;
+		margin-left:10px;
+		margin-right:10px;
+	}
+	
+	/*career page*/
+	#career-wrapper {
+		height:120px;
+		padding-bottom: 30px;
+		background:url(../images/bg.png) no-repeat;
+		background-position:fixed;
+	}
+	.career-wrapper {
+		text-align:center;
+		margin-left:10px;
+		margin-right:10px;
+	}
+	
+	/*about us page*/
+	#about-wrapper {
+		height:120px;
+		padding-bottom: 30px;
+		background:url(../images/bg.png) no-repeat;
+		background-position:fixed;
+	}
+	.about-wrapper {
+		text-align:center;
+		margin-left:10px;
+		margin-right:10px;
+	}
+	.about-heading h1{
+		margin:20px 5px;
+		font-size:36px; 
+		text-align:center;
+	}
+	.company-logo {
+		margin-bottom:20px;
+	}
+
+	.team-wrapper h1{
+		margin-top:20px;
+		margin-bottom:0;
+		text-align:center;
+	}
+	.management-wrapper {
+		text-align:center;
+	}
+	.management-wrapper h1{
+		margin-top:15px;
+		margin-bottom:0;
+	}
+	.management-wrapper h2{
+		margin:0px 0 -10px 0;
+	}
+	.management-wrapper p{
+		margin:0 15px;
+		text-align:justify;
+	}
+	
+	/*services page*/
+	#services-wrapper {
+		height:120px;
+		padding-bottom: 30px;
+		background:url(../images/bg.png) no-repeat;
+		background-position:fixed;
+	}
+	.services-wrapper {
+		text-align:center;
+	}
+	.responsive-webdesign h1 {
+		font-size:36px;
+	}
+	.responsive-webdesign h3 {
+		font-size:18px;
+	}
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+	#home-wrapper {
+		background:url(../images/bg.png) no-repeat;
+		padding-bottom: 0px;
+		height:465px;
+		background-position:fixed;
+	}
+	
+	/*header strips*/
+	.header-strips h1{
+		font-size:32px;
+		margin-bottom:-12px;
+	}
+
+	
+	/*Navigations*/
+	nav li a, nav li span {
+		padding:0 10px;
+		font-size:12px;
+	}
+	nav .current_page_item a {
+		font-size:12px;
+	}
+	
+	.about-people {
+		width:99%;
+	}
+	
+	/*slider*/
+	.da-slider {
+		margin-top:0px !important;
+		height:300px !important;
+		min-width:560px !important;
+	}
+	.da-slide h2 {
+		font-size:40px  !important;
+		top: 20px  !important;
+	}
+	
+	.da-slide p {
+		font-size:16px  !important;
+		top: 80px  !important;
+	}
+	
+	.da-slide .da-img {
+		width:30%  !important;
+		top:10px  !important;
+	}
+	.da-slide .da-link{
+		top:140px  !important;
+		font-size: 12px  !important;
+		padding: 2px 10px 0px !important;
+	}
+	.da-dots{
+		top:260px !important;
+	}
+	
+	#carousel {
+		width:700px !important;
+		text-align:center;
+	}
+	
+	.wrapper p{
+		width:700px !important;
+		margin:0 auto;
+	}
+	
+	nav .current_page_item a {
+		background:none;
+		color:#996699;
+		font-size:12px;
+	}
+	.footer-position {
+		position:fixed; 
+		bottom:0; 
+		width:100%
+	}
+	
+	/*about us page*/
+	.company-logo {
+		margin-bottom:20px;
+	}
+	
+	/*services page*/
+	.responsive-webdesign h1 {
+		font-size:36px;
+	}
+	.responsive-webdesign h3 {
+		font-size:18px;
+	}
+
+}
+
+@media screen and (min-width: 980px) and (max-width: 1099px) {
+	.footer-position {
+		position:fixed; 
+		bottom:0; 
+		width:100%
+	}
+	
+	/*about us page*/
+	.company-logo {
+		margin-bottom:20px;
+	}
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1400px) {
+	.about-people {
+		width:99%;
+	}
+	#home-wrapper {
+		background-size:100%;
+	}
+	.footer-position {
+		position:fixed; 
+		bottom:0; 
+		width:100%
+	}
+	.da-slide .da-img{
+		top: 10px !important;
+	}
+}

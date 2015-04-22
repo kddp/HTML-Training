@@ -1,0 +1,115 @@
+
+Principles:
+
+# Responsive design that adapts to desktop, tablet and phone viewing
+# Have consistent header and footer
+# Content is laid out in consistent style
+     header
+     highlight section
+     content
+     footer
+# Great visual design with consistent usage of colors and fonts
+# Less text, More graphics/images
+# Big bold fonts
+# Simple navigation
+
+Home page
+-------------
+Simplifying lives through technology
+Working with disruptive companies who are on a mission to change the world
+
+[Following Capabilities - scrolling]
+
+Mobile & Tablet Apps
+ - we build beautiful Android, iOS, Windows Mobile & PhoneGap Apps
+ 
+API & Integration
+ - we build secure and scalable REST APIs, SOA services & Messaging applications
+ 
+Responsive web design
+ - we build responsive web apps that adapt to different form factors
+ 
+Gesture 
+ - we build playful gesture control apps using leapmotion
+ 
+Augmented reality
+ - we build lively augmented reality apps
+ 
+Wearable apps
+ - we build innovative apps that run on watches & glasses
+
+
+About Us
+-------------
+We are a community of passionate individuals
+Simplicity and pragmatism are the values we stand for
+
+section 1: Bringing you the expertise of working with world's leading companies
+
+[Picture with all the following logos of companies in the order]
+Philips, Apigee, MI Airline, IBM, JPMC, Sears, AutoZone, BMS, Vodafone, O2, Everything Everywhere, Standard Chartered Bank, Atradius, Edinfor (now Logica), MOCI, Dubai Customs, NHG Singapore, Coalition, Webcetera
+
+
+section 2: Team at work
+[add photos of our workplace here - choose some nice photos from our FB. Need to see whether color looks good or B&W]
+
+
+section 3: Management team
+[what's there in our current site - 3 members, Samarth, Ankush and Manju]
+
+
+Services
+-------------
+We are a community of highly dedicated individuals
+Solving the customer problems end-to-end
+
+Mobile & Tablet Apps
+ We provide the following services
+ - Design and development of Android Apps
+ - Design and development of iOS Apps
+ - Design and development of Windows Mobile Apps
+ - Design and development of PhoneGap Apps
+ 
+API & Integration
+ We provide the following services
+ - Design and development of REST APIs
+ - Design and development of SOA services
+ - Design and development of Messaging applications
+ 
+Responsive Web Apps
+ We provide the following services
+ - Design and development of HTML5/CSS3 web apps
+ - Design and development of web apps using various javascript frameworks like Angular, ExtJS
+ - Design and development of web apps using JEE, Python and PHP
+ 
+Gesture Apps
+ We provide the following services
+ - Design and development of gesture apps using leap motion device
+ 
+Augmented Reality Apps
+ We provide the following services
+ - Design and development of location based AR Apps
+ - Design and development of marker based AR Apps
+ - Design and development of image based AR Apps
+ 
+Wearable Apps
+ We provide the following services
+ - Design and development of smartwatch Apps
+ - Design and development of glass Apps
+
+
+Careers
+-------------
+We are a community of fun loving individuals
+Working on a mission in a tireless manner
+
+[left side have the graphic]    [right side - on big font have the existing content]
+
+
+Contact us
+-------------
+We are a community of welcoming individuals
+Friending people always with a smile
+
+[left side - have the map] [right side - have the details]
+
