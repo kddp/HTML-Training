@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <title>My HTML File</title>
+	    <script src="modules/jquery/dist/jquery.js"></script>
+		<script src="modules/angular/angular.js"></script>
+		<script src="modules/angular-animate/angular-animate.js"></script>
+		<script src="modules/angular-route/angular-route.js"></script>
+		<script src="modules/angular-resource/angular-resource.js"></script>
+	</head>
+	<body ng-app="phonecatApp" ng-controller="PhoneListCtrl"> 
+		<div class="container">
+			<p>Total number of phones:{{phones.length}}</p>
+		  	<div class="row">
+		    	<div>
+					Search: <input ng-model="query">
+		    	</div>
+		    <div>
+				Sort by:
+				<select ng-model="orderProp">
+				  <option value="name">Alphabetical</option>
+				  <option value="age">Newest</option>
+				</select>
+		      	<ul class="phones">
+		        	<li ng-repeat="phone in phones | filter:query | orderBy:orderProp ">
+		          		{{phone.name}}
+		          		<p>{{phone.snippet}}</p>
+		        	</li>
+		      	</ul>
+			</div>
+		</div>
+		<pre>{{phones | filter:query | orderBy:orderProp | json}}</pre>
+	
+	
+	<script>
+		var phonecatApp = angular.module('phonecatApp', []);
+
+		phonecatApp.controller('PhoneListCtrl',function ($scope, $http) {
+		  $http.get('phones.json').success(function(data) {
+		    $scope.phones = data;
+		    //$scope.phones = data.splice(0, 5);
+		  });
+		});
+	</script>
+
+	</body>
+</html>

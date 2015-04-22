@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><style> 
+        #DIV1 {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            border: 1px solid black; 
+        }
+
+        #DIV2 {
+            position: absolute;
+            top: 50px;
+            left: 30px;
+            width: 150px;
+            height: 150px;
+            background-color: coral;
+            border: 1px solid black;
+        }
+
+        #DIV3 {
+            position: absolute;
+            top: 100px;
+            left: 60px;
+            width: 150px;
+            height: 150px;
+            background-color: green;
+            border: 1px solid black;
+        }
+        #DIV4 {
+            position: absolute; 
+            right:0px;
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            border: 1px solid black; 
+        }
+
+        #DIV5 {
+            position: absolute;
+            top: 50px;
+            right: 30px;
+            width: 150px;
+            height: 150px;
+            background-color: coral;
+            border: 1px solid black;
+        }
+
+        #DIV6 {
+            position: absolute;
+            top: 100px;
+            right: 60px;
+            width: 150px;
+            height: 150px;
+            background-color: green;
+            border: 1px solid black;
+        }
+        #DIV7 {
+            position: absolute;
+            bottom: 0px;
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            border: 1px solid black; 
+        }
+        #DIV8 {
+            position: absolute;
+            bottom: 50px;
+            left: 30px;
+            width: 150px;
+            height: 150px;
+            background-color: coral;
+            border: 1px solid black;
+        }
+        #DIV9 {
+            position: absolute;
+            bottom: 100px;
+            left: 60px;
+            width: 150px;
+            height: 150px;
+            background-color: green;
+            border: 1px solid black;
+        }
+        #DIV10 {
+            position: absolute;
+            right:0px;
+            bottom: 0px;
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            border: 1px solid black; 
+        }
+        #DIV11 {
+            position: absolute;
+            bottom: 50px;
+            right: 30px;
+            width: 150px;
+            height: 150px;
+            background-color: coral;
+            border: 1px solid black;
+        }
+        #DIV12 {
+            position: absolute;
+            bottom: 100px;
+            right: 60px;
+            width: 150px;
+            height: 150px;
+            background-color: green;
+            border: 1px solid black;
+        }
+        .block1 {
+            position:absolute;
+            top: 0px; 
+            left: 0px;
+        }
+        .block2 {
+            position:absolute;
+            top:0px;
+            right:0px;
+        }
+        .block3 {
+            position:absolute;
+            bottom:0px;
+            left:0px;
+        }
+        .block4 {
+            position:absolute;
+            bottom:0px;
+            right:0px;
+        }
+        h1{
+            text-align:center
+        }
+        </style>
+    </head>
+    <body>
+        <div class="block1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p id="DIV1"  draggable="true" ondragstart="drag(event)">Card13</p>
+
+            <p id="DIV2"  draggable="true" ondragstart="drag(event)">Card12</p>
+
+            <p id="DIV3"  draggable="true" ondragstart="drag(event)">Card11</p>
+        </div>
+
+        <div class="block2" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p id="DIV4" draggable="true" ondragstart="drag(event)">Card23</p>
+
+            <p id="DIV5" draggable="true" ondragstart="drag(event)">Card22</p>
+
+            <p id="DIV6" draggable="true" ondragstart="drag(event)">Card21</p>
+        </div>
+
+        <div class="block3" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p id="DIV7" draggable="true" ondragstart="drag(event)">Card33</p>
+
+            <p id="DIV8" draggable="true" ondragstart="drag(event)">Card32</p>
+
+            <p id="DIV9" draggable="true" ondragstart="drag(event)">Card31</p>
+        </div>
+
+        <div class="block4" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p id="DIV10" draggable="true" ondragstart="drag(event)">Card43</p>
+
+            <p id="DIV11" draggable="true" ondragstart="drag(event)">Card42</p>
+
+            <p id="DIV12" draggable="true" ondragstart="drag(event)">Card41</p>
+        </div>
+
+        <script>
+        $(document).ready(function(){
+            var click = 0;
+            var zIndex; 
+            $("p").click(function(){ 
+                $(this).delay(1000,function(){
+                    if (click === 0) 
+                   {  
+                        var temp = this.style.zIndex;
+                        temp = (+temp || 0) + 1;
+                        this.style.zIndex = temp; 
+                        zIndex = temp;
+                        click = click + 1;  
+                    } else {  
+                        zIndex = zIndex + 1;
+                        this.style.zIndex = zIndex;
+                    }
+                });
+            });
+        });
+
+        
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("src", ev.target.id);
+        }
+
+        function drop(ev) {
+
+            console.log("Target",ev.toElement);
+            ev.preventDefault();
+            var src = document.getElementById(ev.dataTransfer.getData("src"));
+            console.log("Source",src);
+
+            var srcParent = src.parentNode;
+            console.log("srcParent",srcParent);
+
+            var tgt = ev.currentTarget;
+            console.log("tgt",tgt);
+
+            /*src.style.zIndex = "999";
+            src.style.top = "";
+            src.style.left = "";
+            src.style.right = "";
+            src.style.bottom = "";*/
+
+            //tgt.appendChild(src);
+
+
+            //ev.currentTarget.replaceChild(src, tgt);
+            //srcParent.appendChild(tgt);
+            
+            /*var element = document.createElement('div');
+            element.id = src.id;
+            document.body.appendChild(element);
+            document.getElementById(src.id).style.zIndex='999';
+            document.getElementById(src.id).style.background-color= src.style.background-color;
+            document.getElementById(src.id).style.width = src.style.width;
+            document.getElementById(src.id).style.height = src.style.height;
+
+            //this are not work
+            document.getElementById(src.id).style.left = src.style.left;
+            document.getElementById(src.id).style.top = src.style.top;
+            document.getElementById(src.id).style.right = src.style.right;
+            document.getElementById(src.id).style.bottom = src.style.bottom;
+            */
+            
+        }
+
+        </script>
+    </body>
+</html>

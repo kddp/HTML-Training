@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+		
+		<style>
+			img
+			{
+				width:150px;
+				height:150px;
+			}
+		</style>
+	<head>
+	<body ng-app="">
+		<div class="container" ng-controller="myController">
+			<div>
+				  <img src="3.jpg" id="13" ng-click="replace($event)" style="position: absolute; top: 0; left: 0;"/>
+				  <img src="2.jpg" id="12" ng-click="replace($event)" style="position: absolute; top: 30px; left: 70px;"/>
+				  <img src="1.jpg" id="11" ng-click="replace($event)" style="position: absolute; top: 60px; left: 140px;"/>
+			</div>
+
+			<div>
+				  <img src="3.jpg" id="23" ng-click="replace($event)" style="position: absolute; top: 0; right: 0;"/>
+				  <img src="2.jpg" id="22" ng-click="replace($event)" style="position: absolute; top: 30px; right: 70px;"/>
+				  <img src="1.jpg" id="21" ng-click="replace($event)" style="position: absolute; top: 60px; right: 140px;"/>
+			</div>
+
+			<div>
+				  <img src="3.jpg" id="33" ng-click="replace($event)" style="position: absolute; bottom: 0; left: 0;"/>
+				  <img src="2.jpg" id="32" ng-click="replace($event)" style="position: absolute; bottom: 30px; left: 70px;"/>
+				  <img src="1.jpg" id="31" ng-click="replace($event)" style="position: absolute; bottom: 60px; left: 140px;"/>
+			</div>
+
+			<div>
+				  <img src="3.jpg" id="43" ng-click="replace($event)" style="position: absolute; bottom: 0; right: 0;"/>
+				  <img src="2.jpg" id="42" ng-click="replace($event)" style="position: absolute; bottom: 30px; right: 70px;"/>
+				  <img src="1.jpg" id="41" ng-click="replace($event)" style="position: absolute; bottom: 60px; right: 140px;"/>
+			</div>
+		</div>
+		<script>
+		/*
+			function myController($scope)
+			{
+				$scope.replace = function(event)
+				{
+					console.log(event.target);
+					console.log(event.target.id);
+					
+					var temp_id = event.target.id.substring(0,1);
+					temp_id = temp_id + "1";
+					console.log(temp_id);
+					
+					var temp = document.getElementById(temp_id).src;
+
+					document.getElementById(temp_id).src = event.target.src;
+					document.getElementById(event.target.id).src = temp;
+				}
+			}
+			*/
+
+			function myController($scope){
+				$scope.replace =function(event)
+				{
+					var temp_id = event.target.id.substring(0,1);
+					temp_id = temp_id + "1";
+					console.log(temp_id);
+
+					var zIndex = event.target.style.zIndex;
+					var top = event.target.style.top;
+					var right = event.target.style.right;
+					var left = event.target.style.left
+					var bottom = event.target.style.bottom;
+
+					var myElement = document.getElementById("11");
+
+					event.target.style.position = 'absolute';
+					event.target.style.zIndex = myElement.style.zIndex;
+					event.target.style.top = myElement.style.top;
+					event.target.style.right = myElement.style.right;
+					event.target.style.left = myElement.style.left;
+					event.target.style.bottom = myElement.style.bottom;
+
+					myElement.style.position = 'absolute'; 
+					myElement.style.zIndex = zIndex;
+					myElement.style.top = top;
+					myElement.style.right = right;
+					myElement.style.left = left;
+					myElement.style.bottom = bottom;
+				}
+			}
+		</script>
+
+
+	<body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#hide").click(function(){
+					$("#1").hide(1000);
+					$("#2").hide("fast");
+					$("#3").hide("slow");
+				});
+				$("#show").click(function(){
+					$("#1").show(1000);
+					$("#2").show("fast");
+					$("#3").show("slow");
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h1 class="test">jQuery</h1>
+		<p id="1">Paragraph 1</p>
+		<p id="2">Paragraph 2</p>
+		<p id="3">Paragraph 3</p>
+		<button id="hide">Click to hide</button>
+		<button id="show">Click to See</button>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+.block1 {
+            position:absolute;
+            top: 0px; 
+            left: 0px;
+}
+.block2 {
+            position:absolute;
+            top:0px;
+            right:0px;
+}
+.block3 {
+            position:absolute;
+            bottom:0px;
+            left:0px;
+}
+.block4 {
+            position:absolute;
+            bottom:0px;
+            right:0px;
+}
+h1{
+    text-align:center
+}

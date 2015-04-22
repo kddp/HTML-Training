@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	
+	<style>
+		img
+		{
+			width:150px;
+			height:150px;
+		}
+	</style>
+<head>
+<body>
+	<div>
+		<div>
+			  <img src="3.jpg" id="13" onclick="replace(this)" style="z-index:1; position: absolute; top: 0; left: 0;"/>
+			  <img src="2.jpg" id="12" onclick="replace(this)" style="z-index:2; position: absolute; top: 30px; left: 70px;"/>
+			  <img src="1.jpg" id="11" onclick="replace(this)" style="z-index:3; position: absolute; top: 60px; left: 140px;"/>
+		</div>
+
+		<div>
+			  <img src="3.jpg" id="23" onclick="replace(this)" style="z-index:1; position: absolute; top: 0; right: 0;"/>
+			  <img src="2.jpg" id="22" onclick="replace(this)" style="z-index:2; position: absolute; top: 30px; right: 70px;"/>
+			  <img src="1.jpg" id="21" onclick="replace(this)" style="z-index:3; position: absolute; top: 60px; right: 140px;"/>
+		</div>
+
+		<div>
+			  <img src="3.jpg" id="33" onclick="replace(this)" style="z-index:1; position: absolute; bottom: 0; left: 0;"/>
+			  <img src="2.jpg" id="32" onclick="replace(this)" style="z-index:2; position: absolute; bottom: 30px; left: 70px;"/>
+			  <img src="1.jpg" id="31" onclick="replace(this)" style="z-index:3; position: absolute; bottom: 60px; left: 140px;"/>
+		</div>
+
+		<div>
+			  <img src="3.jpg" id="43" onclick="replace(this)" style="z-index:1; position: absolute; bottom: 0; right: 0;"/>
+			  <img src="2.jpg" id="42" onclick="replace(this)" style="z-index:2; position: absolute; bottom: 30px; right: 70px;"/>
+			  <img src="1.jpg" id="41" onclick="replace(this)" style="z-index:3; position: absolute; bottom: 60px; right: 140px;"/>
+		</div>
+	</div>
+
+	
+
+	<script>
+		function replace(img)
+		{								
+			
+			var temp = document.getElementById('11');
+
+			console.log(img);
+			console.log(document.getElementById('11'));
+
+			document.getElementById('11').style.zIndex  = img.style.zIndex;
+			document.getElementById('11').style.top  = img.style.top;
+			document.getElementById('11').style.bottom  = img.style.bottom;
+			document.getElementById('11').style.right  = img.style.right;
+			document.getElementById('11').style.left  = img.style.left
+			
+			document.getElementById(img.id).style.zIndex = temp.style.zIndex;
+			document.getElementById(img.id).style.top = temp.style.top;
+			document.getElementById(img.id).style.bottom = temp.style.bottom;
+			document.getElementById(img.id).style.right = temp.style.right;
+			document.getElementById(img.id).style.left = temp.style.left;
+			
+			console.log("--------------");
+			console.log(document.getElementById(img.id));
+			console.log(document.getElementById('11'));
+
+
+			//document.getElementById("11").style.zIndex = temp_zIndex;
+			//document.getElementById(img.id).style.zIndex = t;
+			
+			
+			/*temp.style.zIndex = img.style.zIndex;
+			temp.style.top = img.style.top;
+			temp.style.bottom = img.style.bottom;
+			temp.style.right = img.style.right
+			temp.style.left = img.style.left;*/
+
+			//document.getElementById("11").style.zIndex = img.style.zIndex;
+			//console.log(document.getElementById("11").style.zIndex);
+
+			//document.getElementById(temp_id).innerHTML = temp;
+										
+		}
+		/*function replace(img){
+			console.log(img.style.zIndex);
+			var temp_id = img.id.substring(0,1);
+			temp_id = temp_id + "1";
+			console.log(temp_id);
+			var temp = document.getElementById(temp_id).src;
+
+			document.getElementById(temp_id).src = img.src;
+			document.getElementById(img.id).src = temp;
+			
+		}*/
+
+		/*function myController($scope){
+			console.log($scope);
+			$scope.replacer = function($event){
+				console.log($event.target);
+				var temp_id = $event.target.id.substring(0,4);
+				temp_id = temp_id + "1";
+				var temp = document.getElementById(temp_id).src;
+
+				document.getElementById(temp_id).src = img.src;
+				document.getElementById(img.id).src = temp;
+			}
+		}*/
+	</script>
+
+
+<body>
+</html>

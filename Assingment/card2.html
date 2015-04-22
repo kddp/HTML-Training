@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
+    </head>
+    <body>
+        <div class="block1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p id="DIV1" draggable="true" ondragstart="drag(event)" style="position: absolute; width: 150px; height: 150px; background-color: lightblue; border: 1px solid black; ">Card13</p>
+
+            <p id="DIV2" draggable="true" ondragstart="drag(event)" style="position: absolute; top: 50px; left: 30px; width: 150px; height: 150px; background-color: coral; border: 1px solid black;">Card12</p>
+
+            <p id="DIV3" draggable="true" ondragstart="drag(event)" style="position: absolute; top: 100px; left: 60px; width: 150px; height: 150px; background-color: green; border: 1px solid black;">Card11</p>
+        </div>
+
+        <div class="block2" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p id="DIV4" draggable="true" ondragstart="drag(event)" style="position: absolute; right:0px; width: 150px; height: 150px; background-color: lightblue; border: 1px solid black;">Card23</p>
+
+            <p id="DIV5" draggable="true" ondragstart="drag(event)" style="position: absolute; top: 50px; right: 30px; width: 150px; height: 150px; background-color: coral; border: 1px solid black;">Card22</p>
+
+            <p id="DIV6" draggable="true" ondragstart="drag(event)" style=" position: absolute; top: 100px; right: 60px; width: 150px; height: 150px; background-color: green; border: 1px solid black;">Card21</p>
+        </div>
+
+        <div class="block3" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p id="DIV7" draggable="true" ondragstart="drag(event)" style="position: absolute; bottom: 0px; width: 150px; height: 150px; background-color: lightblue; border: 1px solid black; ">Card33</p>
+
+            <p id="DIV8" draggable="true" ondragstart="drag(event)" style="position: absolute; bottom: 50px; left: 30px; width: 150px; height: 150px; background-color: coral; border: 1px solid black;">Card32</p>
+
+            <p id="DIV9" draggable="true" ondragstart="drag(event)" style="position: absolute; bottom: 100px; left: 60px; width: 150px; height: 150px; background-color: green; border: 1px solid black;">Card31</p>
+        </div>
+
+        <div class="block4" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <p id="DIV10" draggable="true" ondragstart="drag(event)" style="position: absolute; right:0px; bottom: 0px;width: 150px; height: 150px; background-color: lightblue; border: 1px solid black; ">Card43</p>
+
+            <p id="DIV11" draggable="true" ondragstart="drag(event)" style="position: absolute; bottom: 50px; right: 30px; width: 150px; height: 150px; background-color: coral; border: 1px solid black;">Card42</p>
+
+            <p id="DIV12" draggable="true" ondragstart="drag(event)" style="position: absolute; bottom: 100px; right: 60px; width: 150px; height: 150px; background-color: green; border: 1px solid black;">Card41</p>
+        </div>
+
+        <script>
+        $(document).ready(function(){
+                var click = 0;
+                var zIndex; 
+                $("p").click(function(){ 
+                    $(this).show("slow",function(){
+                        if (click === 0) {  
+                            var temp = this.style.zIndex;
+                            temp = (+temp || 0) + 1;
+                            this.style.zIndex = temp; 
+                            zIndex = temp;
+                            click = click + 1;  
+                        } else {  
+                            zIndex = zIndex + 1;
+                            this.style.zIndex = zIndex;
+                        }
+                    });
+                });
+            });
+        
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("src", ev.target.id);
+        }
+
+        function drop(ev) {
+
+            console.log("Target",ev.toElement);
+            ev.preventDefault();
+            var src = document.getElementById(ev.dataTransfer.getData("src"));
+            console.log("Source",src);
+
+            var srcParent = src.parentNode;
+            console.log("srcParent",srcParent.className);
+
+            var tgt = ev.currentTarget;
+            console.log("tgt",tgt);
+
+            var num = document.getElementsByClassName(tgt.className);
+            var last = num[0].lastElementChild;
+    
+            if(tgt.className === 'block1')
+            {
+                console.log('inside 1');
+                src.style.top = parseInt(last.style.top, 10) + parseInt("50px", 10) + "px";
+                src.style.left = parseInt(last.style.left, 10) + parseInt("30px", 10) + "px";
+                src.style.right = "";
+
+            }
+            else if(tgt.className === 'block3')
+            {
+                console.log('inside 3');
+                src.style.left = parseInt(last.style.left, 10) + parseInt("30px", 10) + "px";
+                src.style.bottom = parseInt(last.style.bottom, 10) + parseInt("50px", 10) + "px";
+                src.style.top="";
+            }
+            else if(tgt.className === 'block2')
+            {
+               console.log('inside 2');
+                src.style.left = "";
+                src.style.right = parseInt(last.style.right, 10) + parseInt("30px", 10) + "px";
+                src.style.top = parseInt(last.style.top, 10) + parseInt("50px", 10) + "px";
+            }
+            else
+            {
+                console.log('inside 4');
+                src.style.bottom = parseInt(last.style.bottom, 10) + parseInt("50px", 10) + "px";
+                src.style.right = parseInt(last.style.right, 10) + parseInt("30px", 10) + "px";
+                src.style.top = "";
+                src.style.left="";
+            }
+
+            tgt.appendChild(src);
+
+            //var num1 = document.getElementsByClassName(srcParent.className);
+            //console.log("NUM1",num1);
+        }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style> 
+             #DIV1 {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            border: 1px solid black; 
+        }
+
+        #DIV2 {
+            position: absolute;
+            top: 50px;
+            left: 30px;
+            width: 150px;
+            height: 150px;
+            background-color: coral;
+            border: 1px solid black;
+        }
+
+        #DIV3 {
+            position: absolute;
+            top: 100px;
+            left: 60px;
+            width: 150px;
+            height: 150px;
+            background-color: green;
+            border: 1px solid black;
+        }
+        #DIV4 {
+            position: absolute; 
+            right:0px;
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            border: 1px solid black; 
+        }
+
+        #DIV5 {
+            position: absolute;
+            top: 50px;
+            right: 30px;
+            width: 150px;
+            height: 150px;
+            background-color: coral;
+            border: 1px solid black;
+        }
+
+        #DIV6 {
+            position: absolute;
+            top: 100px;
+            right: 60px;
+            width: 150px;
+            height: 150px;
+            background-color: green;
+            border: 1px solid black;
+        }
+        #DIV7 {
+            position: absolute;
+            bottom: 0px;
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            border: 1px solid black; 
+        }
+        #DIV8 {
+            position: absolute;
+            bottom: 50px;
+            left: 30px;
+            width: 150px;
+            height: 150px;
+            background-color: coral;
+            border: 1px solid black;
+        }
+        #DIV9 {
+            position: absolute;
+            bottom: 100px;
+            left: 60px;
+            width: 150px;
+            height: 150px;
+            background-color: green;
+            border: 1px solid black;
+        }
+        #DIV10 {
+            position: absolute;
+            right:0px;
+            bottom: 0px;
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            border: 1px solid black; 
+        }
+        #DIV11 {
+            position: absolute;
+            bottom: 50px;
+            right: 30px;
+            width: 150px;
+            height: 150px;
+            background-color: coral;
+            border: 1px solid black;
+        }
+        #DIV12 {
+            position: absolute;
+            bottom: 100px;
+            right: 60px;
+            width: 150px;
+            height: 150px;
+            background-color: green;
+            border: 1px solid black;
+        }
+
+        #block1 {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            border: 1px solid black;
+        }
+        #block1 {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            border: 1px solid black;
+        }
+        #block1 {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            border: 1px solid black;
+        }
+        #block2 {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 1px solid black;
+        }
+        #block2 {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 1px solid black;
+        }
+        #block2 {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 1px solid black;
+        }
+ 
+        </style>
+    </head>
+    <body>
+        <div class="block1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="DIV1" onclick="myFunction(this)" draggable="true" ondragstart="drag(event)">Card13</div>
+        </div>
+        <div class="block2" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="DIV2" onclick="myFunction(this)" draggable="true" ondragstart="drag(event)">Card12</div>
+        </div>
+        <div class="block3" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="DIV3" onclick="myFunction(this)" draggable="true" ondragstart="drag(event)">Card12</div>
+        </div>
+        <div class="block4" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="DIV4" onclick="myFunction(this)" draggable="true" ondragstart="drag(event)">Card23</div>
+        </div>
+        <div class="block5" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="DIV5" onclick="myFunction(this)" draggable="true" ondragstart="drag(event)">Card22</div>
+        </div>
+        <div class="block6" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="DIV6" onclick="myFunction(this)" draggable="true" ondragstart="drag(event)">Card21</div>
+        </div>
+        <div class="block7" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="DIV7" onclick="myFunction(this)" draggable="true" ondragstart="drag(event)">Card32</div>
+        </div>
+        <div class="block8" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="DIV8" onclick="myFunction(this)" draggable="true" ondragstart="drag(event)">Card31</div>
+        </div>
+        <div class="block9" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="DIV9" onclick="myFunction(this)" draggable="true" ondragstart="drag(event)">Card31</div>
+        </div>
+        <div class="block7" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="DIV10" onclick="myFunction(this)" draggable="true" ondragstart="drag(event)">Card43</div>
+        </div>
+        <div class="block8" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="DIV11" onclick="myFunction(this)" draggable="true" ondragstart="drag(event)">Card42</div>
+        </div>
+        <div class="block9" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <div id="DIV12" onclick="myFunction(this)" draggable="true" ondragstart="drag(event)">Card41</div>
+        </div>
+
+        <script>
+       /*function myFunction(img) {
+            var temp = document.getElementById(img.id).style.zIndex;
+            temp = (+temp || 0) + 1;
+
+            document.getElementById(img.id).style.zIndex = temp;
+
+        }
+        */
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("src", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var src = document.getElementById(ev.dataTransfer.getData("src"));
+            var srcParent = src.parentNode;
+            var tgt = ev.currentTarget.firstElementChild;
+
+            ev.currentTarget.replaceChild(src, tgt);
+            srcParent.appendChild(tgt);
+
+
+        }
+
+
+        ///////////
+        function drag(ev) {
+                ev.dataTransfer.setData("src", ev.target.src);
+                //ev.dataTransfer.setData("id", ev.target.id);
+                //ev.dataTransfer.setData("root",ev.target.parentNode.parentNode.parentNode.className);
+            }
+
+            function drop(ev) {
+                
+                ev.preventDefault();
+                
+                var src = ev.dataTransfer.getData("src");
+                var id = ev.dataTransfer.getData("id"); 
+                var src_root = ev.dataTransfer.getData("root");       
+                
+                var tgt_src = ev.target.src;
+                
+                console.log("source",src);
+                console.log("target", tgt_src);
+                
+                //ev.target.src = src;
+
+                var temp = tgt_src;
+
+             document.getElementById(ev.target.id).src = src;
+                document.getElementById(id).src = temp;
+                console.log(ev.dataTransfer);
+               
+            }
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+	#div1 {
+	    position:absolute;
+      top: 0px; 
+      left: 0px;
+	    
+	}
+  #div2 {
+      position:absolute;
+      top: 0px; 
+      right: 0px;
+      
+  }
+  #div3 {
+      position:absolute;
+      bottom:0px;
+      left: 0px;
+      
+  }
+  #div4 {
+      position:absolute;
+      bottom:0px; 
+      right: 0px;
+      
+  }
+
+	      #block1 {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            border: 1px solid black;
+        }
+        #block2 {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 1px solid black;
+        }
+        #block3 {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            border: 1px solid black;
+        }
+        #block4 {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            border: 1px solid black;
+        }
+</style>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("src", ev.target.id);
+    console.log("TARGET_ID:",ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var src = document.getElementById(ev.dataTransfer.getData("src"));
+    var srcParent = src.parentNode;
+    
+    var tgt = ev.currentTarget.firstElementChild;
+    
+    ev.currentTarget.replaceChild(src, tgt);
+    srcParent.appendChild(tgt);
+}
+</script>
+</head>
+<body>
+		<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+		    <div id="block1" onclick="myFunction(this)" draggable="true" ondragstart="drag(event)"></div>
+		</div>
+		<br>
+		<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+		    <div id="block2" onclick="myFunction(this)" draggable="true" ondragstart="drag(event)"></div>
+		</div>
+    <div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div id="block3" onclick="myFunction(this)" draggable="true" ondragstart="drag(event)"></div>
+    </div>
+    <div id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div id="block4" onclick="myFunction(this)" draggable="true" ondragstart="drag(event)"></div>
+    </div>
+</body>
+</html>
